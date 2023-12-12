@@ -54,6 +54,12 @@ a:nth-of-type(12) {
   animation-iteration-count: 1;
 }
 
+.color-change {
+  background: var(--highlight-secondary);
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
 @keyframes jump {
   0% {
     transform: scale(1, 1) translateY(0);

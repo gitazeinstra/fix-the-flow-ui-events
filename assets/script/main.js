@@ -9,7 +9,6 @@ frontend.addEventListener('click', function onClick(event) {
 
 let design = document.querySelector('a:nth-of-type(2)')
 
-
 design.addEventListener('dblclick', function onClick(event) {
   event.target.style.backgroundColor = 'var(--highlight-secondary';
   event.target.style.color = 'var(--secondary)';
@@ -17,10 +16,15 @@ design.addEventListener('dblclick', function onClick(event) {
 });
 
 let and = document.querySelector('a:nth-of-type(3)')
+
+and.addEventListener('keydown', function() {
+  and.classList.toggle('color-change');
+});
+
+
+let development = document.querySelector('a:nth-of-type(4)')
 let delay;
 let longpress = 1300;
-let development = document.querySelector('a:nth-of-type(4)')
-
 development.addEventListener('mousedown', function (event) {
   delay = setTimeout(check, longpress);
 
@@ -32,11 +36,11 @@ development.addEventListener('mousedown', function (event) {
 
 }, true);
 
-development.addEventListener('mouseup', function (event) {
+development.addEventListener('mouseup', function () {
   clearTimeout(delay);
 });
 
-development.addEventListener('mouseout', function (event) {
+development.addEventListener('mouseout', function () {
   clearTimeout(delay);
 });
 
