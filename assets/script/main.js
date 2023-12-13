@@ -24,6 +24,7 @@ and.addEventListener('keydown', function() {
 let development = document.querySelector('a:nth-of-type(4)')
 let delay;
 let longpress = 1300;
+
 development.addEventListener('mousedown', function (event) {
   delay = setTimeout(check, longpress);
 
@@ -48,11 +49,23 @@ sprint.addEventListener("wheel", function(event) {
   event.target.style.backgroundColor = 'var(--highlight-secondary';
   event.target.style.color = 'var(--secondary)';
   event.target.style.borderColor = 'var(--secondary)';
+
 });
+
+
+let fix = document.querySelector('a:nth-of-type(6)')
+
+fix.addEventListener("mouseover", (event) => {
+  event.target.style.backgroundColor = 'var(--highlight-secondary';
+  event.target.style.color = 'var(--secondary)';
+  event.target.style.borderColor = 'var(--secondary)';
+});
+
+
 
 let interaction = document.querySelector('a:nth-of-type(12)')
 
-interaction.addEventListener('click', jumpHan6dler)
+interaction.addEventListener('click', jumpHandler)
 interaction.addEventListener('animationend', jumpHandler)
 
 function jumpHandler() {
