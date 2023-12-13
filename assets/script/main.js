@@ -61,6 +61,13 @@ fix.addEventListener("mouseover", (event) => {
   event.target.style.borderColor = 'var(--secondary)';
 });
 
+fix.addEventListener("mouseout", (event) => {
+  event.target.style.backgroundColor = 'pink';
+  event.target.style.color = 'var(--secondary)';
+  event.target.style.borderColor = 'var(--secondary)';
+});
+
+
 let the = document.querySelector('a:nth-of-type(7)')
 const hexCharacters = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"]
 
@@ -83,7 +90,6 @@ the.addEventListener("click", (event) => {
   event.target.style.backgroundColor = generateNewColor()
 })
 
-// script.js File
 let flow = document.querySelector('a:nth-of-type(8)')
 function onMouseDrag({ movementX, movementY }) {
   let flowStyle = window.getComputedStyle(flow);
