@@ -83,6 +83,23 @@ the.addEventListener("click", (event) => {
   event.target.style.backgroundColor = generateNewColor()
 })
 
+// script.js File
+let flow = document.querySelector('a:nth-of-type(8)')
+function onMouseDrag({ movementX, movementY }) {
+  let flowStyle = window.getComputedStyle(flow);
+  let leftValue = parseInt(flowStyle.left);
+  let topValue = parseInt(flowStyle.top);
+  flow.style.left = `${leftValue + movementX}px`;
+  flow.style.top = `${topValue + movementY}px`;
+}
+flow.addEventListener("mousedown", () => {
+  flow .addEventListener("mousemove", onMouseDrag);
+});
+document.addEventListener("mouseup", () => {
+  flow.removeEventListener("mousemove", onMouseDrag);
+});
+
+
 let interaction = document.querySelector('a:nth-of-type(12)')
 
 interaction.addEventListener('click', jumpHandler)

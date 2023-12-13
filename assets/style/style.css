@@ -38,7 +38,10 @@ a:hover {
 }
 
 /* UI Event Classes */
-
+a:nth-of-type(8) {
+  position: absolute;
+  cursor: move;
+}
 /* Jump animation on the interaction link */
 a:nth-of-type(12) {
   position: relative;
